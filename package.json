@@ -1,0 +1,36 @@
+{
+  "name": "react-handy-tools",
+  "version": "1.0.0",
+  "description": "Handy tools for React",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gigaamiridze/react-handy-tools"
+  },
+  "keywords": [
+    "React",
+    "Handy",
+    "Tools",
+    "npm",
+    "Package"
+  ],
+  "author": "gigaamiridze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gigaamiridze/react-handy-tools/issues"
+  },
+  "homepage": "https://github.com/gigaamiridze/react-handy-tools#readme",
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "react": "^18.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.2.37",
+    "react": "^18.2.0",
+    "typescript": "^5.2.2"
+  }
+}
