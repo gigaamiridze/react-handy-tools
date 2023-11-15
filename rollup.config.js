@@ -13,25 +13,20 @@ export default [
     output: [
       {
         file: packageJson.main,
-        format: 'cjs',
-        sourcemap: true,
-      },
-      {
-        file: packageJson.module,
         format: 'esm',
         sourcemap: true,
       },
     ],
     plugins: [
-      terser(),
-      resolve(),
-      commonjs(),
       typescript(),
       peerDepsExternal(),
+      resolve(),
+      commonjs(),
+      terser(),
     ],
   },
   {
-    input: 'dist/esm/types/src/index.d.ts',
+    input: 'dist/cjs/types/src/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts.default()],
     external: [/\.css$/],
