@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 
 interface IFlexBoxProps {
   children: ReactNode;
-  flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse' | 'initial' | 'inherit';
-  alignItems?: 'stretch' | 'center' | 'baseline' | 'start' | 'end' | 'flex-start' | 'flex-end' | 'initial' | 'inherit';
-  justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'start' | 'end' | 'space-between' | 'space-around' | 'space-evenly' | 'initial' | 'inherit';
+  flexDirection: 'row' | 'row-reverse' | 'column' | 'column-reverse' | 'initial' | 'inherit';
+  alignItems: 'stretch' | 'center' | 'baseline' | 'start' | 'end' | 'flex-start' | 'flex-end' | 'initial' | 'inherit';
+  justifyContent: 'center' | 'flex-start' | 'flex-end' | 'start' | 'end' | 'space-between' | 'space-around' | 'space-evenly' | 'initial' | 'inherit';
   flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse' | 'initial';
   gap?: number | 'normal' | 'initial' | 'inherit';
   rowGap?: number | 'normal' | 'initial' | 'inherit';
