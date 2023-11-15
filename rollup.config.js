@@ -1,7 +1,8 @@
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
+import terser from '@rollup/plugin-terser';
 import dts from 'rollup-plugin-dts';
 
 import packageJson from './package.json' assert { type: 'json' };
@@ -22,15 +23,17 @@ export default [
       },
     ],
     plugins: [
+      terser(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-      json(),
+      typescript(),
+      peerDepsExternal(),
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/esm/types/src/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    plugins: [dts()],
+    plugins: [dts.default()],
+    external: [/\.css$/],
   },
 ];

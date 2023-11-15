@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c --bundleConfigAsCjs"
   },
   "keywords": [
     "React",
@@ -20,17 +20,18 @@
     "Package"
   ],
   "author": "gigaamiridze",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "^18.2.37",
     "axios": "^1.6.2",
     "react": "^18.2.0",
     "rollup": "^4.4.1",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
