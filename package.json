@@ -25,11 +25,13 @@
   "homepage": "https://github.com/gigaamiridze/react-handy-tools#readme",
   "devDependencies": {
     "@types/react": "^18.2.37",
+    "axios": "^1.6.2",
     "react": "^18.2.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "@types/react": "^18.2.37",
+    "axios": "^1.6.2",
     "react": "^18.2.0",
     "typescript": "^5.2.2"
   }
