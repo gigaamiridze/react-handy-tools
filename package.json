@@ -2,9 +2,11 @@
   "name": "react-handy-tools",
   "version": "1.0.0",
   "description": "Handy tools for React",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,15 +26,18 @@
   },
   "homepage": "https://github.com/gigaamiridze/react-handy-tools#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "^18.2.37",
     "axios": "^1.6.2",
     "react": "^18.2.0",
+    "rollup": "^4.4.1",
+    "rollup-plugin-dts": "^6.1.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "@types/react": "^18.2.37",
     "axios": "^1.6.2",
-    "react": "^18.2.0",
-    "typescript": "^5.2.2"
+    "react": "^18.2.0"
   }
 }
