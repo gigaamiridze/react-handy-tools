@@ -1,5 +1,25 @@
 import React, { ReactNode } from 'react';
 
+interface IHeadingProps {
+  title: string;
+  color: string;
+  fontSize: number;
+}
+
+function Heading(props: IHeadingProps) {
+  const { title, color, fontSize } = props;
+
+  return (
+    <p style={{
+      color: color,
+      fontSize: `${fontSize}px`
+    }}
+    >
+      {title}
+    </p>
+  )
+}
+
 interface IFlexBoxProps {
   children: ReactNode;
   flexDirection: 'row' | 'row-reverse' | 'column' | 'column-reverse' | 'initial' | 'inherit';
@@ -35,6 +55,7 @@ function FlexBox(props: IFlexBoxProps) {
       columnGap: columnGap ? `${columnGap}px` : 0
     }}
     >
+      <Heading title='Heading' color='black' fontSize={16} />
       {children}
     </div>
   )
